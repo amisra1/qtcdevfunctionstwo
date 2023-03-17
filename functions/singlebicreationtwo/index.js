@@ -213,8 +213,8 @@
       fieldsObj["Flat_Price__c"] = flatprice; //arpit
       fieldsObj["Billable_Item__c"] = billableItem; //arpit
       //fieldsObj["Product_Activation_Start_Date__c"] = prodActStartDate; //Arpit
-      //fieldsObj["Product_Activation_Start_Date__c"] = prodActStartDate !== undefined ? prodActStartDate : null
-      fieldsObj["Product_Activation_Start_Date__c"] = "2022-06-01";
+      fieldsObj["Product_Activation_Start_Date__c"] = prodActStartDate !== "" ? prodActStartDate : null;
+     
       
 
       records.singleBIDiscount = {
