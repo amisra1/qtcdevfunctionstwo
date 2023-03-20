@@ -287,14 +287,12 @@
         singleBITiersUpdate[i].fields.Tier_Row__c = i + 999941 + 5;
       }
     }
-    
+    if (singleBITiersUpdate.length > 1) {
     singleBITiersUpdate[
       singleBITiersUpdate.length - 1
     ].fields.Discount_Rate_Start_Date__c =
       singleBITiersUpdate[0].fields.Discount_Rate_Start_Date__c;
-
-    
-    if (singleBITiersUpdate.length > 1) {
+      
       singleBITiersUpdate[
         singleBITiersUpdate.length - 2
       ].fields.Discount_Rate_End_Date__c = null;
