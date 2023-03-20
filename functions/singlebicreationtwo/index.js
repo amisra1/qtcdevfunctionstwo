@@ -266,6 +266,9 @@
         singleBITiersUpdate.push(records.singleBITier);
       }
     }
+    logger.info(
+      `SingleBIUpdate ${JSON.stringify(singleBITiersUpdate || {})}`
+    );
     // Commit the Unit of Work with all the previous registered operations
     //   const response = await context.org.dataApi.commitUnitOfWork(uow);
     for (let i = 0; i < singleBITiersUpdate.length; i++) {
