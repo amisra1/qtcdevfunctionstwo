@@ -212,8 +212,8 @@
       fieldsObj["Quantity__c"] = quantity; //arpit
       fieldsObj["Flat_Price__c"] = flatprice; //arpit
       fieldsObj["Billable_Item__c"] = billableItem; //arpit
-      //fieldsObj["Product_Activation_Start_Date__c"] = prodActStartDate; //Arpit
       fieldsObj["Product_Activation_Start_Date__c"] = prodActStartDate !== "" ? prodActStartDate : null;
+      fieldsObj["Discount_Rate_End_Date__c"] = payload[i].Apttus_CMConfig__EndDate__c !== "" ? payload[i].Apttus_CMConfig__EndDate__c : null,
      
       
 
@@ -221,12 +221,6 @@
         type: "Single_BI_Discount__c",
         fields: fieldsObj
       };
-
-      //Billable_Item__c = singleBi.Billable_Item__c,
-      //ali.Billable_Item__c = sidBIMap.get(biSid);
-     //Discount_Rate_End_Date__c: payload[i].Apttus_CMConfig__EndDate__c !== undefined ? payload[i].Apttus_CMConfig__EndDate__c : null,
-      //Discount_Rate_Start_Date__c:payload[i].Apttus_CMConfig__StartDate__c,
-      // RecordTypeId: "0121W000000DywZ  "
 
       if (
         payload[i].Apttus__Description__c.toLowerCase().includes("flex") &&
